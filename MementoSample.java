@@ -10,17 +10,20 @@ public class MementoSample
         originator.set("STATE 2");
         // save state 2 (index is 0)
         caretaker.addMemento(originator.saveToMemento());
+        
         originator.set("STATE 3");
         // save state 3 (index is 1)
         caretaker.addMemento(originator.saveToMemento());
+        
         originator.set("STATE 4");
         // save state 4 (index is 2)
         caretaker.addMemento(originator.saveToMemento());
+        
         // print current state
         originator.printState();
         System.out.println();
         
-        // restore memento of index 1 (state 3) in the caretaker arraylist
+        // restore memento of index 1 (state 3) from the caretaker arraylist
         originator.restoreFromMemento(caretaker.getMemento(1));
         // note it is indeed state 3
         originator.printState();
